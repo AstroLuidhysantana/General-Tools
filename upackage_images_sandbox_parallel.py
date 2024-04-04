@@ -15,7 +15,7 @@ def decompress_gz_files(main_dir, target_dir):
     os.makedirs(target_dir, exist_ok=True)
     tasks = []
 
-    # collect all compated files
+    # collect all compacted files
     for subdir in os.listdir(main_dir):
         if subdir.startswith("DELVE_northcap_0_") and len(subdir) == 20:
             images_dir = os.path.join(main_dir, subdir, "images")
