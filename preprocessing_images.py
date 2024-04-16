@@ -112,7 +112,7 @@ for idx, fits_file in enumerate(fits_files_subset):
                 elif band == 'z':
                     z_flag = 1
 
-    # Append data for this file to the lists
+    # Appending values
     filenames.append(fits_file)
     ids.append(file_id)
     g_m_values.append(g_m)
@@ -136,7 +136,7 @@ for idx, fits_file in enumerate(fits_files_subset):
     i_min_percentage_list.append(i_min_percentage)
     z_min_percentage_list.append(z_min_percentage)
 
-# Create a DataFrame from the data
+# saving as dataframe
 data = {
     'Filename': filenames,
     'QUICK_OBJECT_ID': ids,
@@ -165,7 +165,7 @@ data = {
 
 df = pd.DataFrame(data)
 
-# Save the DataFrame to a CSV file
+#savinf the table
 #csv_filename = "/luidhy_docker/astrodados/DELVE_MORPHOLOGY_DATA/CONTROL_SAMPLE_CNN/DOMINGUEZ_galaxies/preprocessing_DOMINGUEZ_images_withdiagnostics.csv"
 csv_filename = "/luidhy_docker/astrodados/DELVE_MORPHOLOGY_DATA/CONTROL_SAMPLE_CNN/G10_galaxies/preprocessing_G10galaxies_withdiagnostics.csv"
 
